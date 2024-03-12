@@ -13,10 +13,13 @@
 }
 
 h1 {
+    font-size: 1.5rem;
     font-family: 'Courier New', Courier, monospace;
     color: rgb(54, 61, 61);
     position: absolute;
-    top: 170px;
+    top: 30%;
+    text-align: center;
+    min-width: 190px;
 }
 
 h1.active {
