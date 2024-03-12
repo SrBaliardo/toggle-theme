@@ -1,0 +1,95 @@
+.container {
+    background: azure;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    transition: background 0.7s;
+}
+
+.container.active {
+    background: rgb(54, 61, 61);
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(54, 61, 61);
+    position: absolute;
+    top: 170px;
+}
+
+h1.active {
+    color: azure;
+}
+
+.btn-toggle {
+    width: 200px;
+    height: 90px;
+    border: 5px solid rgb(54, 61, 61);
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-toggle::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgb(54, 61, 61);
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: left 0.7s;
+
+}
+
+.btn-toggle.active::before {
+    left: 115px;
+    background: azure;
+}
+.btn-toggle.active {
+    width: 200px;
+    height: 90px;
+    border: 5px solid azure;
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+}
+
+.moon {
+    width: 30%;
+    left: 5%;
+    bottom: 17%;
+    position: absolute;
+    opacity: 0;
+}
+
+.moon.active {
+    width: 30%;
+    left: 5%;
+    bottom: 17%;
+    position: absolute;
+    opacity: 100;
+    transition-delay: 0.2s;
+}
+
+.sun {
+    width: 30%;
+    left: 63%;
+    bottom: 17%;
+    position: absolute;
+    opacity: 100;
+    transition-delay: 0.2s;
+
+}
+
+.sun.active {
+    width: 30%;
+    left: 5%;
+    bottom: 17%;
+    position: absolute;
+    opacity: 0;
+}
